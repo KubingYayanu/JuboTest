@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jubo.API", "src\services\Jubo.API\Jubo.API.csproj", "{44AC5600-D907-49BB-9D7D-7F5A81112387}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jubo.Domain", "src\services\Jubo.Domain\Jubo.Domain.csproj", "{B55A492C-2F51-4950-9093-ACEA33D53C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jubo.Infrastructure", "src\services\Jubo.Infrastructure\Jubo.Infrastructure.csproj", "{F1212E8A-78C8-4D1B-99EE-9C5DA469202D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jubo.Application", "src\services\Jubo.Application\Jubo.Application.csproj", "{B10C5463-7284-420E-9A98-3912E83C87DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{44AC5600-D907-49BB-9D7D-7F5A81112387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44AC5600-D907-49BB-9D7D-7F5A81112387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44AC5600-D907-49BB-9D7D-7F5A81112387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55A492C-2F51-4950-9093-ACEA33D53C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55A492C-2F51-4950-9093-ACEA33D53C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55A492C-2F51-4950-9093-ACEA33D53C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55A492C-2F51-4950-9093-ACEA33D53C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1212E8A-78C8-4D1B-99EE-9C5DA469202D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1212E8A-78C8-4D1B-99EE-9C5DA469202D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1212E8A-78C8-4D1B-99EE-9C5DA469202D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1212E8A-78C8-4D1B-99EE-9C5DA469202D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10C5463-7284-420E-9A98-3912E83C87DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10C5463-7284-420E-9A98-3912E83C87DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10C5463-7284-420E-9A98-3912E83C87DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10C5463-7284-420E-9A98-3912E83C87DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

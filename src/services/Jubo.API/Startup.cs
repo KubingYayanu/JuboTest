@@ -1,4 +1,7 @@
-﻿namespace Jubo.API
+﻿using Jubo.Application.IoC;
+using Jubo.Infrastructure.IoC;
+
+namespace Jubo.API
 {
     public class Startup
     {
@@ -21,6 +24,12 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Application
+            services.AddApplicationServices(Configuration);
+
+            // Infrastructure
+            services.AddInfrastructureServices(Configuration);
         }
 
         /// <summary>

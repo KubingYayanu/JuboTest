@@ -11,4 +11,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Jubo.Application\Jubo.Application.csproj" />
+      <ProjectReference Include="..\Jubo.Infrastructure\Jubo.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

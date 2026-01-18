@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Jubo.Application.Models.Requests.Patient;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Jubo.API.Controllers
 {
@@ -6,10 +8,21 @@ namespace Jubo.API.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IMediator _mediator;
+
+        public PatientController(IMediator mediator)
         {
-            return Ok(new { Message = "Patient API is working!" });
+            _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var query = new GetAllPatientsQryRequest();
+
+            var response = await _mediator.Send(query);
+
+            return StatusCode(response.Code, response);
         }
     }
 }
