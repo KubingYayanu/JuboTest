@@ -26,12 +26,13 @@ namespace Jubo.API.Controllers
             return StatusCode(response.Code, response);
         }
 
-        [HttpPost("add-order")]
+        [HttpPost("{patientId}/order/add")]
         public async Task<IActionResult> AddOrderToPatient(
+            [FromRoute] AddOrderToPatientRouteVm route,
             [FromBody] AddOrderToPatientVm request)
         {
             var command = new AddOrderToPatientCmdRequest(
-                patientId: request.PatientId,
+                patientId: route.PatientId,
                 message: request.Message);
 
             var response = await _mediator.Send(command);

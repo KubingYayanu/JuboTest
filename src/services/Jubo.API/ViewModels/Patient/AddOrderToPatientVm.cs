@@ -2,11 +2,14 @@
 
 namespace Jubo.API.ViewModels.Patient
 {
-    public class AddOrderToPatientVm
+    public class AddOrderToPatientRouteVm
     {
         [JsonPropertyName("patientId")]
         public int PatientId { get; set; }
+    }
 
+    public class AddOrderToPatientVm
+    {
         [JsonPropertyName("message")]
         public string Message { get; set; }
     }
