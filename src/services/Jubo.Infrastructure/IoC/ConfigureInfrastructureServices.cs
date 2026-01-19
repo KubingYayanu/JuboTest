@@ -14,6 +14,8 @@ namespace Jubo.Infrastructure.IoC
             this IServiceCollection services,
             IConfiguration configuration)
         {
+            SetEnableLegacyTimestampBehavior();
+
             SetupDbContext(services, configuration);
             SetupRepositories(services);
 
@@ -39,6 +41,11 @@ namespace Jubo.Infrastructure.IoC
                 .Replace("{0}", settings.DatabaseName)
                 .Replace("{1}", settings.UserName)
                 .Replace("{2}", settings.Password);
+        }
+
+        private static void SetEnableLegacyTimestampBehavior()
+        {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
         private static void SetupRepositories(IServiceCollection services)

@@ -28,7 +28,13 @@ namespace Jubo.Application.Queries.Patient
                 Patients = patients.Select(x => new GetAllPatientsQryResult.PatientItem
                     {
                         PatientId = x.Id,
-                        Name = x.Name
+                        Name = x.Name,
+                        Orders = x.Orders.Select(o => new GetAllPatientsQryResult.OrderItem
+                            {
+                                OrderId = o.Id,
+                                Message = o.Message
+                            })
+                            .ToList()
                     })
                     .ToList()
             };

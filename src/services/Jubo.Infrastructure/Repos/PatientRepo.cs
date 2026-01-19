@@ -23,5 +23,10 @@ namespace Jubo.Infrastructure.Repos
                 .AsNoTracking()
                 .ToListAsync();
         }
+
+        public async Task AddPatientOrder(PatientOrder order)
+        {
+            await _context.PatientOrder.AddAsync(order);
+        }
     }
 }
