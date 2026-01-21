@@ -11,15 +11,26 @@ $ docker compose -p jubo-test stop
 $ docker compose -p jubo-test down -v
 ```
 
-# API
+# 啟動應用程式
+
+前端將在 http://localhost:3000 開啟
+後端 API 運行在 http://localhost:18886
+
+## 1. 啟動後端 API
 
 ```shell
-# 啟動 API
 $ ./watch-api.bat
+```
 
-# 停止 API
-$ ./kill-watch-api.bat
+## 2. 啟動前端
 
+```shell
+$ ./start-frontend.bat
+```
+
+# API 端點
+
+```shell
 # Get patient list
 $ curl http://localhost:18886/api/v1/patient
 

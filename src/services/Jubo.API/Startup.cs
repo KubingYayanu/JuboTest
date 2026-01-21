@@ -25,6 +25,18 @@ namespace Jubo.API
         {
             services.AddControllers();
 
+            // Add CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
+
             // Application
             services.AddApplicationServices(Configuration);
 
@@ -43,6 +55,8 @@ namespace Jubo.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("AllowReactApp");
 
             app.UseRouting();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
