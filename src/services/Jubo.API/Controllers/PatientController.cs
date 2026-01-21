@@ -39,5 +39,20 @@ namespace Jubo.API.Controllers
 
             return StatusCode(response.Code, response);
         }
+
+        [HttpPatch("{patientId}/order/{orderId}/modify")]
+        public async Task<IActionResult> ModifyPatientOrder(
+            [FromRoute] ModifyPatientOrderRouteVm route,
+            [FromBody] ModifyPatientOrderVm request)
+        {
+            var command = new ModifyPatientOrderCmdRequest(
+                patientId: route.PatientId,
+                orderId: route.OrderId,
+                message: request.Message);
+
+            var response = await _mediator.Send(command);
+
+            return StatusCode(response.Code, response);
+        }
     }
 }

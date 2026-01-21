@@ -24,9 +24,22 @@ namespace Jubo.Infrastructure.Repos
                 .ToListAsync();
         }
 
+        public async Task<PatientOrder?> GetPatientOrder(int patientId, int orderId)
+        {
+            return await _context.PatientOrder
+                .Where(x => x.PatientId == patientId)
+                .Where(x => x.Id == patientId)
+                .SingleOrDefaultAsync();
+        }
+
         public async Task AddPatientOrder(PatientOrder order)
         {
             await _context.PatientOrder.AddAsync(order);
+        }
+
+        public void UpdatePatientOrder(PatientOrder order)
+        {
+            _context.PatientOrder.Update(order);
         }
     }
 }

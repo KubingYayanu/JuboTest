@@ -16,7 +16,7 @@ namespace Jubo.Application.Models.Results
         [JsonPropertyName("code")]
         public int Code { get; set; }
 
-        public void SetCodeAndMessage(HttpStatusCode httpStatusCode)
+        public void SetCode(HttpStatusCode httpStatusCode)
         {
             Code = (int)httpStatusCode;
         }

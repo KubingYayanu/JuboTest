@@ -29,4 +29,11 @@ $ curl -X POST http://localhost:18886/api/v1/patient/1/order/add \
   -d '{
         "message": "test a"
       }'
+
+# Modify patient order
+$ curl -X Patch http://localhost:18886/api/v1/patient/1/order/1/modify \
+  -H "Content-Type: application/json" \
+  -d '{
+        "message": "update test a"
+      }'
 ```
