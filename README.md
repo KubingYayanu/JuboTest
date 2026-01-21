@@ -1,5 +1,7 @@
 # README
 
+- `https://docs.google.com/document/d/1sAmgxU690KNfm8VdILZwRYfseE1D2IO7ACw0tBLQHGE/edit?tab=t.0`
+
 # Docker 環境建置
 
 ```shell
